@@ -1,0 +1,4 @@
+sudo java -cp .:commons-io-1.2.jar:commons-cli-1.1.jar:rabbitmq-client.jar:classes:/opt/pi4j/lib/'*' ReciverAMQP 192.168.0.100
+gcc distance.c -I/usr/lib/jvm/jdk-7-oracle-armhf/include/ -I/usr/lib/jvm/jdk-7-oracle-armhf/include/linux/  -c  -fPIC -std=c99 -lwiringPi
+gcc -shared -Wl,-soname,libsonar.so.1 -o libsonar.so.1.0 distance.o -lwiringPi
+javac   -cp rabbitmq-client.jar:classes:/opt/pi4j/lib/'*'  ReciverAMQP.java Sonar.java
